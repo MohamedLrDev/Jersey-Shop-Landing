@@ -1,7 +1,7 @@
 import { Facebook, Twitter, Instagram, Github } from "lucide-react"
 const Footer = () => {
   return (
-    <footer className="bg-background border-t text-[#1D3557]">
+    <footer className=" border-t text-[#1D3557]">
       <div className="container px-4 py-8 mx-auto">
         <div className="grid grid-cols-1 gap-8 lg:grid-cols-3">
           <div>
@@ -88,7 +88,7 @@ const Footer = () => {
         </div>
         <div className="mt-8 border-t pt-8 flex flex-col-reverse sm:flex-row justify-between items-center">
           <p className="mt-4 sm:mt-0 text-sm text-muted-foreground">
-            &copy; {new Date().getFullYear()} lrhali.dev All rights reserved.
+            &copy; {new Date().getFullYear()} <a href="https://github.com/MohamedLrDev" className=" cursor-pointer text-blue-500 hover:underline">lrhali.dev</a> All rights reserved.
           </p>
           <div className="flex space-x-4">
             <button className="p-2 hover:bg-gray-100 rounded-full">
@@ -103,10 +103,11 @@ const Footer = () => {
               <Instagram className="h-5 w-5" />
               <span className="sr-only">Instagram</span>
             </button>
-            <button className="p-2 hover:bg-gray-100 rounded-full">
-              <Github className="h-5 w-5" />
+            <a href="https://github.com/MohamedLrDev" className="p-2 hover:bg-gray-100 rounded-full">
+              <Github  className="h-5 w-5" />
               <span className="sr-only">GitHub</span>
-            </button>
+            </a>
+            
           </div>
         </div>
       </div>

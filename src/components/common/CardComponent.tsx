@@ -18,7 +18,7 @@ export default function CardComponent(props: propsType) {
           <img
             src={props.image}
             alt={props.title}
-            className="w-full h-full object-contain  transition-transform duration-300 ease-in-out hover:scale-105"
+            className="w-full h-full object-contain  transition-transform duration-300 ease-in-out hover:scale-105 cursor-pointer"
           />
         </div>
       </CardHeader>

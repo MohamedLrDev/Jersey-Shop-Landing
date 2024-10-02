@@ -6,6 +6,7 @@ import ProductHighlights from "../components/common/ProductHighlights";
 import Footer from "../components/layouts/Footer";
 import TeamsCarousel from "@/components/common/TeamsCarousel";
 import NewArrivals from "@/components/common/NewArrivals";
+import ProductPage from "@/components/common/ProductPage";
 
 const Home = () => {
   return (
@@ -17,6 +18,7 @@ const Home = () => {
       <NewArrivals />
       {/* <TeamsCarousel /> */}
       <Footer />
+      <ProductPage />
     </div>
   );
 };
