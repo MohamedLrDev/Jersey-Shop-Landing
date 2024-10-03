@@ -1,26 +1,27 @@
 import { Button } from "@/components/ui/button";
 import CardComponent from "./CardComponent";
-import jersey  from '../../assets/images/jerseys/ac-milan-jersey.png'
-import jersey2 from '../../assets/images/jerseys/jersey-3d.png'
-import jersey3 from '../../assets/images/jerseys/bayern-jersey.png'
-import jersey4 from '../../assets/images/jerseys/betis-jersey.png'
+import jersey from '../../assets/images/jerseys/ac-milan-jersey.png';
+import jersey2 from '../../assets/images/jerseys/jersey-3d.png';
+import jersey3 from '../../assets/images/jerseys/bayern-jersey.png';
+import jersey4 from '../../assets/images/jerseys/betis-jersey.png';
 import { useState, useEffect } from "react";
 
 const NewArrivals = () => {
+  const [isSmallScreen, setIsSmallScreen] = useState<boolean>(false);
+  const [isMediumScreen, setIsMediumScreen] = useState<boolean>(false);
 
-    const [isSmallScreen, setIsSmallScreen] = useState<boolean>(false);
+  useEffect(() => {
+    const checkScreenSize = () => {
+      setIsSmallScreen(window.innerWidth < 640); // Adjust for small screens
+      setIsMediumScreen(window.innerWidth >= 768 && window.innerWidth < 1280); // Between 768px and 1279px
+    };
 
-    useEffect(() => {
-        const checkScreenSize = () => {
-            setIsSmallScreen(window.innerWidth < 640); // 640px is the 'sm' breakpoint in Tailwind
-        };
+    checkScreenSize();
+    window.addEventListener("resize", checkScreenSize);
 
-        checkScreenSize();
-        window.addEventListener("resize", checkScreenSize);
+    return () => window.removeEventListener("resize", checkScreenSize);
+  }, []);
 
-        return () => window.removeEventListener("resize", checkScreenSize);
-    }, []);
-  
   const items = [
     {
       title: "Ac Milan Home",
@@ -57,14 +58,16 @@ const NewArrivals = () => {
   ];
 
   const displayedData = isSmallScreen ? items.slice(0, 2) : items;
+
   return (
-    <div className="w-full h-auto px-12 pb-6 bg-[#A8DADC]">
-      <h1 className="capitalize text-4xl py-6  text-center text-[#1D3557]">
-        Check our <span className="font-semibold text-[#E63946]">new</span>{" "}
-        arrivals
+    <div className="relative w-full h-auto px-12 pb-6 bg-[#A8DADC]">
+      <h1 className="capitalize text-4xl py-6 text-center text-[#1D3557]">
+        Check our <span className="font-semibold text-[#E63946]">new</span> arrivals
       </h1>
-      <div className="grid grid-cols-1 sm:grid-cols-2 md:grid-cols-3 xl:grid-cols-4 gap-4 px-10">
-        {displayedData.map((product, index) => ( // Correct order of parameters
+
+      {/* Grid for items */}
+      <div className="grid grid-cols-1 sm:grid-cols-2 md:grid-cols-3 xl:grid-cols-4 gap-4 xl:gap-0  mb-16">
+        {displayedData.map((product, index) => (
           <CardComponent
             key={index}
             image={product.image}
@@ -76,11 +79,16 @@ const NewArrivals = () => {
           />
         ))}
       </div>
-      <div className="flex justify-center pt-5">
-        <Button variant="outline"
-        className="bg-[#A8DADC] border-2 rounded-none font-semibold text-[#1D3557] border-[#1D3557] hover:bg-[#A8DADC] shadow-lg hover:text-[#1D3557] transition-transform duration-300 ease-in-out hover:scale-105 "
+
+      {/* Manually positioned button */}
+      <div
+        className={`absolute ${isMediumScreen ? "left-1/2 transform translate-x-1/2 bottom-10 -translate-y-[200px]" : "bottom-6 left-0 right-0"} flex justify-center`}
+      >
+        <Button
+          variant="outline"
+          className="bg-[#A8DADC] px-10 border-2 rounded-none font-semibold text-[#1D3557] border-[#1D3557] hover:bg-[#A8DADC] shadow-lg hover:text-[#1D3557] transition-transform duration-300 ease-in-out hover:scale-105"
         >
-            View more articles
+          View more articles
         </Button>
       </div>
     </div>
