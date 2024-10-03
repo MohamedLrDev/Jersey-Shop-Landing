@@ -3,9 +3,9 @@ import { CheckCircle, ThumbsUp, Bolt, Handshake } from "lucide-react";
 
 const ProductHighlights = () => {
   return (
-    <div className="flex flex-col items-center lg:px-12 text-[#1D3557] my-8 px-8">
+    <div className="flex flex-col dark:text-white items-center lg:px-12 text-[#1D3557] my-8 px-8">
       {/* Title Section */}
-      <h1 className="text-4xl mb-2 text-center ">
+      <h1 className="text-4xl mb-2  text-center ">
         Get<span className="font-semibold text-[#E63946]"> YOUR </span>
         jersey
       </h1>

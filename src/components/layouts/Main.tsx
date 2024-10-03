@@ -37,7 +37,7 @@ export default function Main() {
         },
         {
             image: jersey4,
-            title: "mancity jersey",
+            title: "Manchester City jersey",
         },
         {
             image: jersey5,
@@ -46,10 +46,10 @@ export default function Main() {
     ];
 
     return (
-        <div className="mt-8 sm:mt-12 pt-14 md:mt-16 py-4 w-full h-fit bg-[#F7F7F7] relative">
-            <div className="absolute inset-0 pattern-dots pattern-blue-600 pattern-bg-transparent pattern-opacity-10 pattern-size-8" />
+        <div className="mt-8 sm:mt-12 pt-14 md:mt-16 py-4 dark:bg-gray-800 w-full h-fit bg-[#F7F7F7] relative">
+            <div className="absolute inset-0 pattern-dots pattern-blue-600 dark:pattern-gray-400 pattern-bg-transparent pattern-opacity-10 pattern-size-8" />
             <div className="relative z-10 px-4 sm:px-6 lg:px-8">
-                <div className="flex flex-col justify-center text-[#1D3557] items-center w-full text-transform: capitalize">
+                <div className="flex flex-col justify-center text-[#1D3557] dark:text-[#F7F7F7] items-center w-full text-transform: capitalize ">
                     <h1 className="text-4xl sm:text-6xl md:text-7xl lg:text-8xl xl:text-9xl flex flex-col sm:flex-row items-center text-center sm:text-left">
                         <span>Express</span>
                         <span className="hidden sm:inline-block w-10 sm:w-16 md:w-20 h-1 sm:h-2 bg-[#E63946] mx-2 sm:mx-4"></span>

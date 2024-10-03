@@ -14,7 +14,7 @@ const CardComp = ({ imageSrc, title }: Info) => {
                 />
             </figure>
             <div className="card-body text-center"> {/* Center text in the card body */}
-                <h2 className="card-title text-lg xl:text-xl md:text-xl lg:text-base line-clamp-1">{title}</h2>
+                <h2 className=" dark:text-white card-title text-lg xl:text-xl md:text-xl lg:text-base line-clamp-1">{title}</h2>
                 {/* <p className="text-sm md:text-base lg:text-base line-clamp-1">{description}</p> */}
             </div>
         </div>

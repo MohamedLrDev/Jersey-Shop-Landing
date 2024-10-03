@@ -12,7 +12,7 @@ interface propsType {
 
 export default function CardComponent(props: propsType) {
   return (
-    <Card className="w-full max-w-fit px-5 bg-[#F7F7F7] sm:max-w-xs md:max-w-sm lg:max-w-sm xl:max-w-xs mx-auto overflow-hidden transition-all duration-300 ease-in-out">
+    <Card className="w-full max-w-fit px-5  sm:max-w-xs md:max-w-sm lg:max-w-sm xl:max-w-xs mx-auto overflow-hidden transition-all duration-300 ease-in-out">
       <CardHeader className="p-0">
         <div className="h-48 w-full"> {/* Fixed height for the image container */}
           <img
@@ -40,7 +40,7 @@ export default function CardComponent(props: propsType) {
         </div>
       </CardContent>
       <CardFooter className="p-2 md:p-4 pt-0">
-        <Button className="bg-[#1D3557] hover:bg-[#457B9D] w-full text-xs md:text-sm py-1 md:py-2">
+        <Button className="bg-[#1D3557] hover:bg-[#457B9D] dark:text-white w-full text-xs md:text-sm py-1 md:py-2">
           Add to Cart
         </Button>
       </CardFooter>

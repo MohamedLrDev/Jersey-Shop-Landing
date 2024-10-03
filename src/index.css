@@ -5,12 +5,18 @@
 body {
     font-family: "Poppins", sans-serif;
     background-color: #f7f7f7;
+    
 }
 
 
 .slick-prev,
 .slick-next {
     z-index: 1; /* Bring the arrows above other elements */
+}
+
+/* Example for dark mode styles */
+.dark body {
+  background-color: #1F2937; /* Dark mode background (gray) */
 }
 
 

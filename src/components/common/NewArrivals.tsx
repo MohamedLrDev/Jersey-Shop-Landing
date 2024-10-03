@@ -60,9 +60,9 @@ const NewArrivals = () => {
   const displayedData = isSmallScreen ? items.slice(0, 2) : items;
 
   return (
-    <div className="relative w-full h-auto px-12 pb-6 bg-[#A8DADC]">
-      <h1 className="capitalize text-4xl py-6 text-center text-[#1D3557]">
-        Check our <span className="font-semibold text-[#E63946]">new</span> arrivals
+    <div className="relative w-full h-auto px-12 pb-6 bg-[#A8DADC] dark:bg-[#E63946]">
+      <h1 className="capitalize text-4xl py-6 text-center text-[#1D3557] dark:text-white">
+        Check our <span className="font-semibold text-[#E63946] dark:text-[#1F2937]">new</span> arrivals
       </h1>
 
       {/* Grid for items */}
@@ -86,7 +86,7 @@ const NewArrivals = () => {
       >
         <Button
           variant="outline"
-          className="bg-[#A8DADC] px-10 border-2 rounded-none font-semibold text-[#1D3557] border-[#1D3557] hover:bg-[#A8DADC] shadow-lg hover:text-[#1D3557] transition-transform duration-300 ease-in-out hover:scale-105"
+          className="bg-[#A8DADC] dark:bg-[#E63946] px-10 border-2 rounded-none font-semibold dark:text-white text-[#1D3557] border-[#1D3557] dark:border-white hover:bg-[#A8DADC] shadow-lg hover:text-[#1D3557] transition-transform duration-300 ease-in-out hover:scale-105"
         >
           View more articles
         </Button>
