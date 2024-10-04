@@ -6,6 +6,7 @@ import CardSlider from "../components/common/CardSlider";
 import ProductHighlights from "../components/common/ProductHighlights";
 import Footer from "../components/layouts/Footer";
 import NewArrivals from "@/components/common/NewArrivals";
+import Reviews from "@/components/common/CustomerReviews";
 
 const Home = () => {
   const [darkMode, setDarkMode] = useState<boolean>(false);
@@ -26,6 +27,7 @@ const Home = () => {
       <CardSlider />
       <ProductHighlights />
       <NewArrivals />
+      <Reviews />
       <Footer />
       {/* hello */}
     </div>
