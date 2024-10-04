@@ -26,7 +26,7 @@ export default function Navbar({ toggleDarkMode, darkMode }: DarkModeProps) {
         </button>
       </div>
 
-      {/* Links */}
+      {/* Links and Dark Mode Toggle */}
       <ul
         className={`flex-col lg:flex-row lg:flex absolute lg:relative top-[70px] lg:top-0 left-0 w-full lg:w-auto lg:bg-transparent transition-all duration-300 ease-in-out ${
           isMenuOpen ? "flex shadow-md" : "hidden"
@@ -45,6 +45,13 @@ export default function Navbar({ toggleDarkMode, darkMode }: DarkModeProps) {
             </div>
           </li>
         ))}
+
+        {/* Dark Mode Toggle Icon in the Mobile Menu */}
+        <li className="mt-4 lg:mt-0">
+          <div onClick={toggleDarkMode} className="lg:max-3xl:hidden 3xl:hidden cursor-pointer hover:text-gray-400 flex items-center">
+            {darkMode ? <Sun size={24} /> : <Moon size={24} />}
+          </div>
+        </li>
       </ul>
 
       {/* Icons */}
@@ -52,7 +59,7 @@ export default function Navbar({ toggleDarkMode, darkMode }: DarkModeProps) {
         <ShoppingCart className="cursor-pointer hover:text-gray-400" />
         <User className="cursor-pointer hover:text-gray-400" />
         
-        {/* Dark Mode Toggle Icon */}
+        {/* Dark Mode Toggle Icon for Desktop */}
         <div onClick={toggleDarkMode} className="cursor-pointer hover:text-gray-400">
           {darkMode ? <Sun size={24} /> : <Moon size={24} />}
         </div>
