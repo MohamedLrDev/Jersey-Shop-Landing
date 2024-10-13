@@ -48,19 +48,25 @@ export default function Navbar({ toggleDarkMode, darkMode }: DarkModeProps) {
 
         {/* Dark Mode Toggle Icon in the Mobile Menu */}
         <li className="mt-4 lg:mt-0">
-          <div onClick={toggleDarkMode} className="lg:max-3xl:hidden 3xl:hidden cursor-pointer hover:text-gray-400 flex items-center">
+          <div
+            onClick={toggleDarkMode}
+            className="lg:max-3xl:hidden 3xl:hidden cursor-pointer hover:text-gray-400 flex items-center"
+          >
             {darkMode ? <Sun size={24} /> : <Moon size={24} />}
           </div>
         </li>
       </ul>
 
       {/* Icons */}
-      <div className="hidden lg:flex items-center space-x-6 dark:text-white">
+      <div className="hidden lg:flex items-center  space-x-6 dark:text-white">
         <ShoppingCart className="cursor-pointer hover:text-gray-400" />
         <User className="cursor-pointer hover:text-gray-400" />
-        
+
         {/* Dark Mode Toggle Icon for Desktop */}
-        <div onClick={toggleDarkMode} className="cursor-pointer hover:text-gray-400">
+        <div
+          onClick={toggleDarkMode}
+          className="cursor-pointer hover:text-gray-400"
+        >
           {darkMode ? <Sun size={24} /> : <Moon size={24} />}
         </div>
       </div>

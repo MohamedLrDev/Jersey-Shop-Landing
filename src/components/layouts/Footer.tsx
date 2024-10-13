@@ -103,8 +103,8 @@ const Footer = () => {
               <Instagram className="h-5 w-5" />
               <span className="sr-only">Instagram</span>
             </button>
-            <a href="https://github.com/MohamedLrDev" className="p-2 hover:bg-gray-100 rounded-full">
-              <Github  className="h-5 w-5" />
+            <a href="https://github.com/MohamedLrDev" className="p-2 hover:bg-gray-100  rounded-full">
+              <Github  className="h-5 w-5 " />
               <span className="sr-only">GitHub</span>
             </a>
             

@@ -1,19 +1,15 @@
 import { Quote, User } from "lucide-react"; // Importing Lucide icons
-// import footballMohamedSalah from '../../assets/images/wallpapers/football-mohamed-salah.jpg';
 
 interface reviews {
   content: string;
-  title: string
+  title: string;
   author: string;
   location: string;
 }
 
-const Reviews = ({content, author, title, location}: reviews) => {
+const Reviews = ({ content, author, title, location }: reviews) => {
   return (
-    <section className="w-full text-[#1D3557]  dark:text-white mt-7  relative" >
-      {/* Black Transparent Overlay */}
-      {/* <div className="absolute inset-0 bg-black bg-opacity-60"></div> */}
-
+    <section className="w-full text-[#1D3557] dark:text-white mt-7 relative">
       {/* Content */}
       <div className="relative max-w-screen-xl mx-auto px-6 sm:px-10 md:px-16 lg:px-20 xl:px-28 2xl:px-96 text-center space-y-6">
         {/* Title */}

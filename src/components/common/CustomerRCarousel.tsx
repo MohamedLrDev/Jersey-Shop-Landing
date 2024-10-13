@@ -94,7 +94,7 @@ const CustomerRCarousel = () => {
   }, [reviews.length]);
 
   return (
-    <div className="relative overflow-hidden w-full">
+    <div className="relative overflow-hidden w-full mb-20">
       <h1 className="capitalize text-3xl md:max-3xl:text-4xl mt-6 text-center text-[#1D3557] px-3 dark:text-white">
         hear from our{" "}
         <span className="font-semibold text-[#E63946] ">
@@ -103,7 +103,7 @@ const CustomerRCarousel = () => {
         Customers 😃
       </h1>
       <Carousel>
-        <CarouselContent className="relative h-[40vh]">
+        <CarouselContent className="relative h-[45vh] md:max-3xl:h-[40vh]  ">
           {reviews.map((item, index) => (
             <CarouselItem
               key={index}
